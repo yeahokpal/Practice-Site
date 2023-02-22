@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rubik:wght@400;700&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: #430202;
+}
+
+a:link {
+    color: green;
+}
+
+/* #region Text Styles */
+.title {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.veryImportantList {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    list-style-position: inside;
+}
+
+.nestedListCenter {
+    margin-left: 46%;
+    color: white;
+    font-size: 2rem;
+    list-style-position: inside;
+}
+
+.tables {
+    margin-left: auto;
+    margin-right:  auto;
+    border-color: white;
+    font-size: 1rem;
+}
+/* #endregion */
+
+/* #region Image Styles */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* #endregion */
+
+/* #region Collapsible Styles */
+.collapsible {
+    background-color: #5f0a0a;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.content {
+    text-align: center;
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #A00204;
+    color: white;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.active, .collapsible:hover {
+    background-color: #A00204;
+    transition: background-color 0.5s ease; 
+}
+
+button.collapsible.active {
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+/* #endregion */
