@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #430202;
+    background-color: #430202 !important;
 }
 
 a:link {
@@ -64,6 +64,12 @@ a:link {
 }
 /* #endregion */
 
+/* #region Roster Styles */
+.rosterGrid {
+    grid-template-columns: repeat(14, 1fr);
+}
+/* #endregion */
+
 /* #region Collapsible Styles */
 .collapsible {
     background-color: #5f0a0a;
@@ -93,7 +99,6 @@ a:link {
 
 .active, .collapsible:hover {
     background-color: #A00204;
-    transition: background-color 0.5s ease; 
 }
 
 button.collapsible.active {
@@ -113,3 +118,4 @@ button.collapsible.active {
     content: "\2212";
 }
 /* #endregion */
+
