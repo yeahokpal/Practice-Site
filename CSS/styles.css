@@ -3,15 +3,6 @@
 * {
     font-family: 'Rubik', sans-serif;
 }
-
-body {
-    background-color: #430202 !important;
-}
-
-a:link {
-    color: green;
-}
-
 /* #region Text Styles */
 .title {
     color: white;
@@ -65,8 +56,93 @@ a:link {
 /* #endregion */
 
 /* #region Roster Styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 .rosterGrid {
-    grid-template-columns: repeat(14, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+
+.rosterItem {
+    transition: .35s;
+    position: relative;
+    z-index: 0;
+}
+
+.rosterItem > img {
+    display: block;
+    align-items: center;
+    width: calc(100vw/14);
+    aspect-ratio: 1 / 1;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: .35s;
+}
+
+.unfinished {
+    filter: blur(3px);
+}
+
+.rosterItem:not(.unfinished):hover > img {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transform: scale(1.5);
+}
+
+.rosterItem:not(.unfinished):hover {
+    z-index: 200;
+}
+
+@media screen and (max-width: 1000px) {
+    .rosterGrid {
+        flex-direction: row;
+    }
+
+    .rosterItem > img {
+        width: calc(100vw/10);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rosterGrid {
+        flex-direction: row;
+    }
+
+    .rosterItem > img {
+        width: calc(100vw/4);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rosterGrid {
+        flex-direction: column;
+    }
+
+    .rosterItem > img {
+        width: calc(100vw/2);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
 }
 /* #endregion */
 
