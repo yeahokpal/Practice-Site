@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rubik:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rubik:wght@400;700&display=swap");
 
 * {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
 
 .tables {
     margin-left: auto;
-    margin-right:  auto;
+    margin-right: auto;
     border-color: white;
     font-size: 1rem;
 }
@@ -60,21 +60,50 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.rotate {
+    animation: rotation 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
 /* #endregion */
 
 /* #region Loading Screen */
-.loadScreen {
+#loadScreen {
     width: 100%;
     height: 100%;
     background-color: gray;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
 }
 
-.loadIcon {
+#iconContainer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#loadIcon {
     width: 400px;
-    height: 400px;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    aspect-ratio: 1 / 1;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    vertical-align: middle;
 }
 /* #endregion */
 
@@ -87,7 +116,7 @@ body {
 }
 
 .rosterItem {
-    transition: .35s;
+    transition: 0.35s;
     position: relative;
     z-index: 0;
 }
@@ -95,12 +124,12 @@ body {
 .rosterItem > a > img {
     display: block;
     align-items: center;
-    width: calc(100vw/14);
+    width: calc(100vw / 14);
     aspect-ratio: 1 / 1;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: .35s;
+    transition: 0.35s;
 }
 
 .unfinished {
@@ -124,7 +153,7 @@ body {
     }
 
     .rosterItem > a > img {
-        width: calc(100vw/10);
+        width: calc(100vw / 10);
         margin-left: auto;
         margin-right: auto;
     }
@@ -136,7 +165,7 @@ body {
     }
 
     .rosterItem > a > img {
-        width: calc(100vw/4);
+        width: calc(100vw / 4);
         margin-left: auto;
         margin-right: auto;
     }
@@ -152,7 +181,7 @@ body {
     }
 
     .rosterItem > a > img {
-        width: calc(100vw/2);
+        width: calc(100vw / 2);
         margin-left: auto;
         margin-right: auto;
     }
@@ -182,7 +211,7 @@ body {
     text-align: center;
     padding: 0 18px;
     overflow: hidden;
-    background-color: #A00204;
+    background-color: #a00204;
     color: white;
     max-height: 0;
     transition: max-height 0.2s ease-out;
@@ -190,8 +219,9 @@ body {
     border-bottom-right-radius: 1rem;
 }
 
-.active, .collapsible:hover {
-    background-color: #A00204;
+.active,
+.collapsible:hover {
+    background-color: #a00204;
 }
 
 button.collapsible.active {
@@ -200,7 +230,7 @@ button.collapsible.active {
 }
 
 .collapsible:after {
-    content: '\002B';
+    content: "\002B";
     color: white;
     font-weight: bold;
     float: right;
@@ -211,4 +241,3 @@ button.collapsible.active {
     content: "\2212";
 }
 /* #endregion */
-

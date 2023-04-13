@@ -9,8 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- JQuery ImagesLoaded Plugin -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script src="../Scripts/roster.js"></script>
-    <link rel="icon" href="../Images/Smash_Ball.svg">
+    <script src="../Scripts/roster.js" defer></script>
+    <link rel="icon" href="../Images/smashBall.svg">
     <link rel="stylesheet" href="../CSS/styles.css">
     <title>Smash Roster</title>
 </head>
@@ -20,8 +20,8 @@ body {
 }
 </style>
 <body>
-    <div class="loadScreen">
-        <div class="loadIcon"><img src="../Images/Kazuya/imNotGonnaSugarcoatIt.jpg"></div>
+    <div id="loadScreen">
+        <div id="iconContainer"><img id="loadIcon" class="rotate" src="../Images/smashBall.png"></div>
     </div>
     <div class="rosterGrid">
         <div class="rosterItem unfinished"><a href="#"><img src="../Images/Index/mario.PNG"></a></div>
